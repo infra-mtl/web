@@ -2,28 +2,43 @@
 <html>
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.parallax');
+            var instances = M.Parallax.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function(){
+            $('.parallax').parallax();
+        });
+    </script>
 </head>
 
 <body>
-    <div class="navbar-fixed">
-        <nav class=" grey lighten-4" role="navigation">
-            <div class="nav-wrapper container">
-                <a href="#!" class="brand-logo black-text"><i class="material-icons">location_city</i>Observatoire des Infrastructures de Montréal</a>
-                <br/>
-                <div class="row">
-                    <ul class="right hide-on-med-and-down">
-                        <li><a class="btn waves-effect waves-light blue" href="#about">Présentation</a></li>
-                        <li><a class="btn waves-effect waves-light blue" href="#activity">Activités</a></li>
-                        <li><a class="btn waves-effect waves-light blue" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
+    <nav class="grey lighten-4 nav-extented" role="navigation">
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo black-text"><i class="material-icons">location_city</i>Observatoire des Infrastructures de Montréal</a>
+        </div>
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a class="btn waves-effect waves-light blue" href="#about" style="padding-top: 5px">Présentation</a></li>
+                <li class="tab"><a class="btn waves-effect waves-light blue" href="#activity" style="padding-top: 5px">Activités</a></li>
+                <li class="tab"><a class="btn waves-effect waves-light blue" href="#contact"  style="padding-top: 5px">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="parallax-container">
+        <div class="parallax"><img src="https://cdn.pixabay.com/photo/2014/07/31/21/57/excavator-406959_1280.jpg"></div>
+      </div>
 
     <div class="container">
         <div class="section">

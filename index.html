@@ -4,6 +4,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="css/materialize.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -11,33 +12,36 @@
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             var elems = document.querySelectorAll('.parallax');
-            var instances = M.Parallax.init(elems, options);
-        });
-
-        // Or with jQuery
-
-        $(document).ready(function(){
-            $('.parallax').parallax();
+            var instances = M.Parallax.init(elems);
         });
     </script>
 </head>
 
 <body>
-    <nav class="grey lighten-4 nav-extented" role="navigation">
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo black-text"><i class="material-icons">location_city</i>Observatoire des Infrastructures de Montréal</a>
-        </div>
-        <div class="nav-content">
-            <ul class="tabs tabs-transparent">
-                <li class="tab"><a class="btn waves-effect waves-light blue" href="#about" style="padding-top: 5px">Présentation</a></li>
-                <li class="tab"><a class="btn waves-effect waves-light blue" href="#activity" style="padding-top: 5px">Activités</a></li>
-                <li class="tab"><a class="btn waves-effect waves-light blue" href="#contact"  style="padding-top: 5px">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="navbar-fixed">
+        <nav class="waves-light blue nav-extented" role="navigation">
+            <div class="container nav-wrapper">
+                <a href="#!" class="brand-logo" style="padding-left: 5px;"><img src="images/rosace.svg" style="width: 20px; margin-right: 10px;"/>Société montréalaise des amateurs d'infrastructures</a>
+                <ul class="hide-on-med-and-down right">
+                    <li>
+                        <a href="#" class="btn waves-effect waves-light blue">
+                            S'inscrire
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="container nav-content">
+                <ul class="tabs tabs-transparent">
+                    <li class="tab"><a class="btn waves-effect waves-light blue" href="#about" style="padding-top: 5px">Présentation</a></li>
+                    <li class="tab"><a class="btn waves-effect waves-light blue" href="#activity" style="padding-top: 5px">Activités</a></li>
+                    <li class="tab"><a class="btn waves-effect waves-light blue" href="#contact"  style="padding-top: 5px">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
     <div class="parallax-container">
-        <div class="parallax"><img src="https://cdn.pixabay.com/photo/2014/07/31/21/57/excavator-406959_1280.jpg"></div>
+        <div class="parallax"><img src="images/frontpage.jpg"></div>
       </div>
 
     <div class="container">
@@ -52,11 +56,6 @@
                         Inspiré du "Infrastructure Observatory" le groupe organise des visites de lieux
                         industriels afin de découvrir le patrimoine ingénieux de Montréal.
                     </p>
-                    <div class="row">
-                        <a href="#" class="btn waves-effect waves-light blue">
-                            S'inscrire à la liste de discussion
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
